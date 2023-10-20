@@ -218,122 +218,78 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10010.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png"
       ]
-    }, {
-      "author": "@sunert", 
-      "descs_html": [
-        "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Script/raw/master/TaskConf/youth/readme.md\">配置说明</a></h4>", 
-        "<br />", 
-        "<p>其中<font color='#FF0000',font-weight: bold>zq_nick、zqcash</font>和<font color='#FF0000',font-weight: bold>zqcard</font>为昵称、提现金额和早起打卡开关，无需另外获取，相关项设置后自动生成，cashurl_zq和cashbody_zq为提现请求，获取后方可自动提现，可选</p>"
-      ], 
-      "keys": [
-        "zq_nick", 
-        "youthheader_zq", 
-        "read_zq", 
-        "readtime_zq", 
-        "cashurl_zq", 
-        "cashbody_zq", 
-        "zqcash", 
-        "zqcard"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/youth.js", 
-      "id": "youth", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js", 
-      "settings": [
-        {
-          "id": "zqcard", 
-          "val": "false", 
-          "name": "打卡赚钱", 
-          "type": "boolean", 
-          "desc": "每日打卡报名及早起打卡"
-        }, 
-        {
-          "id": "zqtime", 
-          "val": "05", 
-          "name": "打卡时间", 
-          "type": "number", 
-          "desc": "每日早起打卡时间"
-        }, 
-        {
-          "id": "delay_rotary_zq", 
-          "val": "10", 
-          "name": "转盘时间间隔", 
-          "type": "number", 
-          "desc": "间隔时间设置，如1秒填1即可"
-        }, 
-        {
-          "id": "notifytimes", 
-          "val": "", 
-          "name": "通知频率 (点击查看设置说明)", 
-          "type": "number", 
-          "desc": "设定通知频率，前三次为全部通知，之后转盘次数/设定频率整除时通知，如设置0为无通知，设置1为全部通知，设置其他数可整除余0时通知，默认值50"
-        }, 
-        {
-          "id": "zqcash", 
-          "val": "30", 
-          "name": "提现金额", 
-          "type": "radios", 
-          "desc": "自动提现金额需和获取提现请求保持一致", 
-          "items": [
-            {
-              "key": "10", 
-              "label": "10元"
-            }, 
-            {
-              "key": "30", 
-              "label": "30元"
-            }, 
-            {
-              "key": "100", 
-              "label": "100元"
-            }
-          ]
-        }
-      ], 
-      "name": "中青看点", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-      ]
     }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "youth_start", 
-        "youth_look"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/youth_gain.js", 
-      "id": "youthGain", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js", 
-      "name": "中青浏览赚&看看赚", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "youth_autoread", 
-        "autotime_zq"
-      ], 
-      "settings": [
-      {
-          "id": "youth_cut", 
-          "val": false, 
-          "name": "缩减请求", 
-          "type": "boolean", 
-          "desc": "自动删除收益为0或者错误的阅读请求，使用完后请立即关闭，避免清空阅读请求"
-        }
-      ],
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/Youth_Read.js", 
-      "id": "youthRead", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js", 
-      "name": "中青自动阅读", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-      ]
-    },
+        {
+            "id": "yuheng.imaotai",
+            "name": "i茅台预约",
+            "descs_html": [
+                "留空"
+            ],
+            "keys": [
+                "imaotai__config__clearshopdir",
+                "imaotai__config__province",
+                "imaotai__config__city",
+                "imaotai__config__itemcode",
+                "imaotai__config__address",
+                "imaotai__config__shopid"
+            ],
+            "settings": [
+                {
+                    "id": "imaotai__config__clearshopdir",
+                    "name": "是否清空店铺字段",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "不懂默认即可"
+                },
+                {
+                    "id": "imaotai__config__province",
+                    "name": "省份名称",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "必填, 例如: 山东省"
+                },
+                {
+                    "id": "imaotai__config__city",
+                    "name": "城市名称",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "必填, 例如: 济南市"
+                },
+                {
+                    "id": "imaotai__config__itemcode",
+                    "name": "预约项",
+                    "val": "10213",
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "需要预约的项目{'10213': '贵州茅台酒（癸卯兔年）', '2478': '贵州茅台酒（珍品）','10214': '贵州茅台酒（癸卯兔年）x2','10056': '53%vol 500ml 茅台1935'}"
+                },
+                {
+                    "id": "imaotai__config__address",
+                    "name": "当前位置",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "尽量具体, 比如: 山东省济南市齐鲁软件园, 精确到标志性建筑物"
+                },
+                {
+                    "id": "imaotai__config__shopid",
+                    "name": "需要预约的店铺id",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "置空默认选择最近店铺"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/imaotai/mini.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/imaotai/imaotai.js"
+        },
   {
    "id": "zZ.umetrip",
    "name": "航旅纵横(pro)",
